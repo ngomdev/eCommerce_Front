@@ -19,20 +19,7 @@ const Product = ({ product }) => {
                 </Link>
 
                 <Card.Text as='div'>
-                    <div className='my-3'>
-                        <Button style={{
-                            background: '#6883bc',
-                            color: 'white',
-                            padding: '8px',
-                            borderRadius: '30px',
 
-                        }} type='button' disabled={
-                            product.countInStock === 0}>
-                            Commander
-
-
-                        </Button>
-                    </div>
 
                 </Card.Text>
                 <Card.Text as='div'>
@@ -42,6 +29,7 @@ const Product = ({ product }) => {
 
                 </Card.Text>
                 <Card.Text as='h3'>{product.price} FCFA</Card.Text>
+
 
             </Card.Body>
 

@@ -9,6 +9,11 @@ import { Container } from "react-bootstrap";
 import Footer from "./components/Footer";
 import HomeScreen from "./components/screens/HomeScreen";
 import ProductScreen from "./components/screens/ProductScreen";
+import CartScreen from './components/screens/CartScreen';
+import LoginScreen from './components/screens/LoginScreen';
+import RegisterScreen from './components/screens/RegisterScreen';
+import ProfilScreen from './components/screens/ProfilScreen';
+import UsersListScreen from "./components/screens/UsersListScreen";
 function App() {
   return (
     <BrowserRouter>
@@ -16,8 +21,16 @@ function App() {
       <main className="py-4">
         <Container className="container-index">
           <Routes>
-            <Route path="" element={<HomeScreen />} />
+            <Route path="/login" element={<LoginScreen />} />
+            <Route path="/register" element={<RegisterScreen />} />
+            <Route path="/profile" element={<ProfilScreen />} />
             <Route path="/product/:id" element={<ProductScreen />} />
+            <Route path="/cart/:id" element={<CartScreen />} />
+            <Route path="/cart" element={<CartScreen />} />
+            <Route path="/Admin/userlist" element={<UsersListScreen />} />
+            <Route path="/" element={<HomeScreen />} />
+
+
           </Routes>
         </Container>
       </main>

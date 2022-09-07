@@ -27,12 +27,12 @@
 
 .cart {
   font-size: 20px;
-  color: #8a307f;
+
 }
 
 .login {
   font-size: 20px;
-  color: #8a307f
+
 }
 
 .sale {
@@ -40,15 +40,16 @@
 }
 
 .fbs-logo {
-  width: 60px;
-  height: 60px;
+  width: 135px;
+
 
 }
 
 .img-carousel {
-  width: 100%;
+  /*margin-left: 50px;*/
+
   object-fit: cover;
-  margin-top: 20px;
+
 
 }
 
@@ -56,7 +57,9 @@
   transform: scale(1.01)
 }
 
-
+.logout {
+  color: #fff;
+}
 
 
 
@@ -191,13 +194,19 @@
 
 
 .form {
-  margin-left: 20px;
+  margin-right: 50px;
 
 }
 
 .btn-seach {
-  outline-style: #3a61c6;
-  border-radius: 0 30px 30px 0;
+
+  border-radius: 5px;
+
+}
+
+.input-seach {
+  margin-left: 100px;
+  width: 100%;
 }
 
 .input-seach {
@@ -217,4 +226,59 @@ main {
 
 h3 {
   padding: 1rem 0;
+}
+
+.gotop-btn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ff9801;
+  font-size: 22px;
+  text-decoration: none;
+  text-align: center;
+  bottom: 40px;
+  right: 50px;
+  padding: 8px;
+}
+
+.gotop-btn i {
+  color: white !important;
+  transition: all .3s;
+}
+
+.gotop-btn:hover {
+  background-color: #0097fe !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+
+.delete {
+  color: #8a307f;
+
+}
+
+.panierTop {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 13px;
+  background-color: #ff9801;
+  border-radius: 50%;
+  color: #fff;
+  border: 1px solid #ff9801;
+  padding: 2px;
+
 }
