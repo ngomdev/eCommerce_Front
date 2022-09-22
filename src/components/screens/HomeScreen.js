@@ -11,20 +11,23 @@ import Loader from '../Loader'
 import { Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../../actions/productAction';
+import { useParams } from 'react-router-dom';
 
 
 const HomeScreen = () => {
+    let params = useParams()
 
+    const keyWord = params.keyWord
     const dispath = useDispatch()
 
     const productList = useSelector(state => state.productList)
     const { loading, error, products } = productList
 
     useEffect(() => {
-        dispath(listProducts())
+        dispath(listProducts(keyWord))
 
 
-    }, [dispath])
+    }, [dispath, keyWord])
 
 
     return (

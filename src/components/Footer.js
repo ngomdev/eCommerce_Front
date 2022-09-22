@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from "react-bootstrap";
 import logo from '../../src/assets/logo.png'
+import ScrollButton from './ScrollButton';
 
 const Footer = () => {
     return (
@@ -33,7 +34,7 @@ const Footer = () => {
                     <p className="copyright">Friend's Business Services © 2022</p>
                 </Container>
             </footer>
-            <a className='gotop-btn' href='#'><i className="fa-solid fa-arrow-up"></i></a>
+            <ScrollButton />
         </div>
 
     );

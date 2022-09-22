@@ -54,6 +54,7 @@ const RegisterScreen = () => {
                     <Form.Label>Nom</Form.Label>
                     <Form.Control
                         type='name'
+                        autoComplete='off'
                         placeholder='votre name'
                         value={name}
                         onChange={(e) => SetName(e.target.value)}
@@ -70,6 +71,7 @@ const RegisterScreen = () => {
                     <Form.Label>Adresse Email</Form.Label>
                     <Form.Control
                         type='email'
+                        autoComplete='off'
                         placeholder='votre email'
                         value={email}
                         onChange={(e) => SetEmail(e.target.value)}

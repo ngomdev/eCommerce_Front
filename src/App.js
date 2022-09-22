@@ -14,6 +14,8 @@ import LoginScreen from './components/screens/LoginScreen';
 import RegisterScreen from './components/screens/RegisterScreen';
 import ProfilScreen from './components/screens/ProfilScreen';
 import UsersListScreen from "./components/screens/UsersListScreen";
+import UserEditScreen from "./components/screens/UserEditScreen";
+import ProductListScreen from "./components/screens/ProductListScreen";
 function App() {
   return (
     <BrowserRouter>
@@ -27,8 +29,11 @@ function App() {
             <Route path="/product/:id" element={<ProductScreen />} />
             <Route path="/cart/:id" element={<CartScreen />} />
             <Route path="/cart" element={<CartScreen />} />
-            <Route path="/Admin/userlist" element={<UsersListScreen />} />
+            <Route path="/admin/userlist" element={<UsersListScreen />} />
+            <Route path="/admin/user/:id/edit" element={<UserEditScreen />} />
+            <Route path="/admin/productlist" element={<ProductListScreen />} />
             <Route path="/" element={<HomeScreen />} />
+            <Route path="/search/:keyword" element={<HomeScreen />} />
 
 
           </Routes>

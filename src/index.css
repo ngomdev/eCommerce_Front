@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2? family= Sen:wght@400;700;800 & family= Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300; 1,400;1,700 & family= Urbanist:ital,wght@0,100;0,400;1,400 & display=swap');
+
 .container-header {
   background: #3a61c6;
   display: flex;
@@ -62,7 +64,13 @@
 }
 
 
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+
+}
 
 
 /*############################## footer###################################*/

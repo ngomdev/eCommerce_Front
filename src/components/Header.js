@@ -7,6 +7,7 @@ import {
 } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from "../actions/userAction";
+import SeachBox from "./SeachBox";
 
 
 const Header = () => {
@@ -39,13 +40,13 @@ const Header = () => {
                         <LinkContainer to="/">
                             <Navbar.Brand><img src={logo} alt="" className='fbs-logo' /></Navbar.Brand>
                         </LinkContainer>
-                        <Dropdown style={{ marginLeft: '100px' }}>
+
+                        <Dropdown style={{}}>
                             <Dropdown.Toggle style={{
 
                                 background: 'white',
                                 color: 'black',
-
-
+                                marginLeft: '50px',
                                 fontSize: '18px'
 
 
@@ -62,16 +63,10 @@ const Header = () => {
                         </Dropdown>
 
 
-                        <Form className="d-flex form">
-                            <Form.Control
-                                type="search"
-                                placeholder="Rechercher un produit..."
-                                className="me-2 input-seach"
-                                aria-label="Search"
 
-                            />
-                            <Button className='btn-seach' variant="outline-primary"><i className="fa-solid fa-magnifying-glass"></i></Button>
-                        </Form>
+                        <SeachBox />
+
+
 
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
@@ -83,7 +78,9 @@ const Header = () => {
                                         background: '#ff9801',
                                         color: 'white',
                                         outline: 'none',
-                                        margnRight: '30px',
+                                        marginRight: '75px',
+                                        padding: '6px 16px 6px 16px',
+
                                         fontSize: '18px'
 
 
@@ -105,8 +102,8 @@ const Header = () => {
 
                                 ) :
 
-                                    <LinkContainer to="/login" style={{ color: 'black', marginLeft: '20px', fontSize: '18px' }}>
-                                        <Nav.Link style={{ color: 'black' }}><i className="fas fa-user login"></i> Se connecter</Nav.Link>
+                                    <LinkContainer to="/login" style={{ color: 'black', marginRight: '10px', fontSize: '18px' }}>
+                                        <Nav.Link style={{ color: 'black' }}><i className="fas fa-user login"></i> Se Connecter</Nav.Link>
                                     </LinkContainer>
                                 }
 
@@ -133,7 +130,7 @@ const Header = () => {
 
 
 
-                                <LinkContainer style={{ color: 'black', position: 'relative', fontSize: '18px' }} to="/cart">
+                                <LinkContainer style={{ color: 'black', position: 'relative', marginRight: '35px', fontSize: '18px' }} to="/cart">
                                     <Nav.Link > Panier
                                         <i className="fas fa-shopping-cart cart">
                                             <div className="panierTop">0</div>
