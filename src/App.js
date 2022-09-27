@@ -16,6 +16,7 @@ import ProfilScreen from './components/screens/ProfilScreen';
 import UsersListScreen from "./components/screens/UsersListScreen";
 import UserEditScreen from "./components/screens/UserEditScreen";
 import ProductListScreen from "./components/screens/ProductListScreen";
+import ProductEditScreen from "./components/screens/ProductEditScreen";
 function App() {
   return (
     <BrowserRouter>
@@ -32,6 +33,7 @@ function App() {
             <Route path="/admin/userlist" element={<UsersListScreen />} />
             <Route path="/admin/user/:id/edit" element={<UserEditScreen />} />
             <Route path="/admin/productlist" element={<ProductListScreen />} />
+            <Route path="/admin/product/:id/edit" element={<ProductEditScreen />} />
             <Route path="/" element={<HomeScreen />} />
             <Route path="/search/:keyword" element={<HomeScreen />} />
 
