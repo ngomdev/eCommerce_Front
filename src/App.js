@@ -17,6 +17,11 @@ import UsersListScreen from "./components/screens/UsersListScreen";
 import UserEditScreen from "./components/screens/UserEditScreen";
 import ProductListScreen from "./components/screens/ProductListScreen";
 import ProductEditScreen from "./components/screens/ProductEditScreen";
+import OrderListScreen from "./components/screens/OrderListScreen";
+import ShippingScreen from "./components/screens/ShippingScreen";
+import PaymentScreen from "./components/screens/PaymentScreen";
+import PlaceOrderScreen from "./components/screens/PlaceOrderScreen";
+import OrderScreen from "./components/screens/OrderScreen";
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +29,10 @@ function App() {
       <main className="py-4">
         <Container className="container-index">
           <Routes>
+            <Route path="/shipping" element={<ShippingScreen />} />
+            <Route path="/payment" element={<PaymentScreen />} />
+            <Route path="/placeorder" element={<PlaceOrderScreen />} />
+            <Route path="/order/:id" element={<OrderScreen />} />
             <Route path="/login" element={<LoginScreen />} />
             <Route path="/register" element={<RegisterScreen />} />
             <Route path="/profile" element={<ProfilScreen />} />
@@ -33,6 +42,7 @@ function App() {
             <Route path="/admin/userlist" element={<UsersListScreen />} />
             <Route path="/admin/user/:id/edit" element={<UserEditScreen />} />
             <Route path="/admin/productlist" element={<ProductListScreen />} />
+            <Route path="/admin/orderlist" element={<OrderListScreen />} />
             <Route path="/admin/product/:id/edit" element={<ProductEditScreen />} />
             <Route path="/" element={<HomeScreen />} />
             <Route path="/search/:keyword" element={<HomeScreen />} />

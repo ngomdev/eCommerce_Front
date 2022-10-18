@@ -1,11 +1,11 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { Row, Col, Image, ListGroup, Form, Button, Card, ListGroupItem } from 'react-bootstrap'
 import Message from '../Message'
 import { addToCart, removeFromCart } from '../../actions/cartAction'
-import AlertDismissible from '../Message';
+
 
 const CartScreen = () => {
     let params = useParams();
@@ -32,7 +32,8 @@ const CartScreen = () => {
     }
 
     const checkOutHandler = () => {
-        navigate(`/login?redirect=shippingCart`, { replace: true })
+        // navigate(`/login?redirect=shippingCart`, { replace: true })
+        navigate(`/shipping`, { replace: true })
 
     }
 

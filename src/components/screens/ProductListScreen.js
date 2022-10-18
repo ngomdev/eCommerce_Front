@@ -26,6 +26,7 @@ const ProductListScreen = () => {
     const createProductHandler = () => {
         // create product
         dispatch(createProduct())
+
     }
     const dispatch = useDispatch()
 

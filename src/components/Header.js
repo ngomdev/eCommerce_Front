@@ -47,7 +47,7 @@ const Header = () => {
                                 background: 'white',
                                 color: 'black',
                                 marginLeft: '50px',
-                                fontSize: '18px'
+                                fontSize: '15px'
 
 
                             }} id="dropdown-basic">
@@ -71,7 +71,7 @@ const Header = () => {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="ml-auto nav" >
-                                <LinkContainer to="/vendre" style={{ color: 'black' }}>
+                                {/* <LinkContainer to="/vendre" style={{ color: 'black' }}>
                                     <Nav.Link><button className='btn' style={{
 
                                         borderRadius: '6px',
@@ -81,13 +81,21 @@ const Header = () => {
                                         marginRight: '75px',
                                         padding: '6px 16px 6px 16px',
 
-                                        fontSize: '18px'
+                                        fontSize: '15px'
 
 
                                     }}>Vendre</button>
                                     </Nav.Link>
-                                </LinkContainer>
+                                </LinkContainer> */}
 
+                                <LinkContainer style={{ color: 'black', position: 'relative', marginRight: '35px', fontSize: '15px' }} to="/cart">
+                                    <Nav.Link > Panier
+                                        <i className="fas fa-shopping-cart cart">
+                                            {/* <div className="panierTop">0</div> */}
+                                        </i>
+
+                                    </Nav.Link>
+                                </LinkContainer>
 
 
                                 {userLogin.userInfo ? (
@@ -102,7 +110,7 @@ const Header = () => {
 
                                 ) :
 
-                                    <LinkContainer to="/login" style={{ color: 'black', marginRight: '10px', fontSize: '18px' }}>
+                                    <LinkContainer to="/login" style={{ color: 'black', marginRight: '10px', fontSize: '15px' }}>
                                         <Nav.Link style={{ color: 'black' }}><i className="fas fa-user login"></i> Se Connecter</Nav.Link>
                                     </LinkContainer>
                                 }
@@ -130,14 +138,6 @@ const Header = () => {
 
 
 
-                                <LinkContainer style={{ color: 'black', position: 'relative', marginRight: '35px', fontSize: '18px' }} to="/cart">
-                                    <Nav.Link > Panier
-                                        <i className="fas fa-shopping-cart cart">
-                                            <div className="panierTop">0</div>
-                                        </i>
-
-                                    </Nav.Link>
-                                </LinkContainer>
 
 
                             </Nav>

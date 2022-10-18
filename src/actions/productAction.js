@@ -107,7 +107,7 @@ export const createProduct = () => async (dispatch, getState) => {
         })
 
         const { userLogin: { userInfo } } = getState()
-        console.log({ userInfo })
+
 
         const config = {
             headers: {

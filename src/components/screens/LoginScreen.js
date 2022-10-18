@@ -24,7 +24,7 @@ const LoginScreen = () => {
 
     useEffect(() => {
         if (userInfo) {
-            navigate('/', { replace: true })
+            navigate(redirect, { replace: true })
         }
     }, [navigate, userInfo, redirect])
 
@@ -32,6 +32,8 @@ const LoginScreen = () => {
         e.preventDefault()
         //DISPATCH LOGIN
         dispatch(login(email, password))
+
+
     }
 
     return (
